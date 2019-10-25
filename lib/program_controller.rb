@@ -167,9 +167,13 @@ class CommandLineInterface
                 main_menu
             end
         remove_prompt = prompt.yes?("Dude, Are You Sure?")
-            if remove_prompt != "Yes"
+        # binding.pry
+            if remove_prompt == false
                remove_bike
-            else destroy_bike = logged_in_user.bikes.find{|bike| bike.id == bikes[0..2].to_i}
+            else
+                
+
+                destroy_bike = logged_in_user.bikes.find{|bike| bike.id == bikes[0..2].to_i}
             #    binding.pry
                destroy_bike.destroy
                
